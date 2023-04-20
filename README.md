@@ -1,6 +1,12 @@
 # TwitchBot: BathyBot
 
-My first Twitch bot: does a lot of random generic bidding, with the following simple functionalities:
+My first Twitch bot: does a lot of random generic bidding.
+
+
+Uses Flask and a webserver to continually ping to ensure the bot stays up 24 / 7. In reality this is something more like 10 / 3 but it's there when it counts.
+
+
+Has the following simple functionalities:
 
 ### Guessing Game
 Chat can trigger a guessing game with !guessgame and a number as a second arg. 
