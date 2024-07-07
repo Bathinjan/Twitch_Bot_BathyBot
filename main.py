@@ -17,19 +17,6 @@ setListIndex = 0
 
 # -------------------------------------------------------------------
 
-### TODO
-
-# see if you can store objects in the db under 1 key
-
-# Madlibs game with chat (possible???)
-# you would have to make a separate command for every word entry
-# also lots of DB checks but certainly not impossible
-# COULD just take messages in chat.....?
-# would be more nonsensical and even funnier
-# pastebin API is probably a good bet here: https://pastebin.com/doc_api
-
-# -------------------------------------------------------------------
-
 # no more of these globals
 # look at me
 # we are DB entries now
@@ -158,41 +145,6 @@ class Bot(commands.Bot):
         if 'notlikethis' in message.content.lower():
             await message.channel.send("NotLikeThis")
 
-        # 'gay' appears anywhere in chat
-        if 'gay' in message.content.lower():
-            await message.channel.send("GayPride")
-
-        # 'GayPride' appears anywhere in chat
-        if 'GayPride' in message.content.lower():
-            await message.channel.send("GayPride")
-
-        # 'trans' appears anywhere in chat
-        if 'trans' in message.content.lower():
-            await message.channel.send("TransgenderPride")
-
-        # if 'buttsbot yes' appears anywhere in chat
-        if 'buttsbot yes' in message.content.lower():
-            await message.channel.send("buttsbot NO")
-
-        # if 'ace' appears anywhere in chat
-        if 'ace' in message.content.lower():
-            await message.channel.send("AsexualPride")
-
-        # if 'pan' appears anywhere in chat
-        if 'pan' in message.content.lower():
-            await message.channel.send("PansexualPride")
-
-        # if 'bi' appears anywhere in chat
-        if 'bi' in message.content.lower():
-            await message.channel.send("BisexualPride")
-
-        # if 'lesbian' appears anywhere in chat
-        if 'lesbian' in message.content.lower():
-            await message.channel.send("LesbianPride")
-
-        # if 'balls' appears anywhere in chat
-        if 'balls' in message.content.lower():
-            await message.channel.send("cubes")
 
         # if 'bathybot is a liar'
         if 'bathybot is a liar' in message.content.lower():
@@ -277,7 +229,7 @@ class Bot(commands.Bot):
     @commands.command()
     async def creator(self, ctx: commands.Context):
         await ctx.send(
-            'Bath is a game dev, pixel / 3D artist, (shitty) programmer, musician, speedrunner, and writer. I was created from their hubris. Check out their works at https://twitter.com/bathinjan_ !'
+            'Bath is a game dev, pixel / 3D artist, programmer, speedrunner, and writer. I was created from their hubris.'
         )
 
     # !guessgame
@@ -400,8 +352,7 @@ class Bot(commands.Bot):
       await ctx.send(f'Absolutely massive, {ctx.author.name}.')
 
     # !pundetected
-    # This is for my mod, EdIsEverywhere
-    # Making the worst puns known to man
+    # This is for my mod, EdIsEverywhere, making the worst puns known to man
     @commands.command()
     async def pundetected(self, ctx: commands.Context):
       await ctx.send(f'@EdIsEverywhere you better knock it off, buddy.')
